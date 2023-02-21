@@ -4,7 +4,7 @@ import 'package:grock/grock.dart';
 import 'package:postislemiriverpood/views/login.dart';
 
 import '../services/loginservice.dart';
-import '../views/pascode.dart';
+import '../views/home.dart';
 
 class LoginViewModel extends ChangeNotifier {
   final usernameController = TextEditingController();
@@ -19,7 +19,7 @@ class LoginViewModel extends ChangeNotifier {
       if (value != null) {
         box.write('token', value.token);
 
-        Grock.toRemove(PasscodePage());
+        Grock.toRemove(HomePage());
         notifyListeners();
       } else {
         Grock.snackBar(
@@ -27,6 +27,7 @@ class LoginViewModel extends ChangeNotifier {
           title: 'Hata',
           color: Colors.orange,
           curve: Curves.bounceIn,
+          duration: Duration(seconds: 2),
         );
         Grock.toRemove(LoginPage());
         notifyListeners();

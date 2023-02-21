@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_awesome_buttons/flutter_awesome_buttons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:social_media_recorder/audio_encoder_type.dart';
@@ -93,13 +91,11 @@ class _LoginPageState extends ConsumerState<LoginPage> {
               Align(
                 alignment: Alignment.centerRight,
                 child: SocialMediaRecorder(
-                  sendRequestFunction: (soundFile) {},
+                  sendRequestFunction: (soundFile) {
+                    print(soundFile);
+                  },
                   encode: AudioEncoderType.AAC_HE,
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () async {},
-                child: const Text('deneme'),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
