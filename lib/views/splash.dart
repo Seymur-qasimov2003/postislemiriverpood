@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:postislemiriverpood/views/home.dart';
@@ -36,7 +35,6 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
   }
 
-  @override
   @override
   Widget build(BuildContext context) {
     return Scaffold(
