@@ -20,6 +20,25 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Login Page'),
+        titleSpacing: 4,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(30),
+          ),
+        ),
+        titleTextStyle: TextStyle(
+          color: Colors.black,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        toolbarHeight: 150,
+        centerTitle: true,
+        toolbarOpacity: 0.5,
+        leadingWidth: 100,
+        elevation: 10,
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(

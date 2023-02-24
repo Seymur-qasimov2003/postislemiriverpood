@@ -27,7 +27,7 @@ class LoginViewModel extends ChangeNotifier {
           title: 'Hata',
           color: Colors.orange,
           curve: Curves.bounceIn,
-          duration: Duration(seconds: 2),
+          duration: Duration(seconds: 3),
         );
         Grock.toRemove(LoginPage());
         notifyListeners();
